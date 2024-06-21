@@ -32,6 +32,22 @@ def create_contact():
     
     return jsonify({"message":"User Created Successfully!"}), 201
 
+# Decorator for update
+app.route("/contacts/<int:user_id>", methods=["PATCH"])
+def update_contact(user_id):
+    contact = Contact.query.get(user_id)
+    if not contact:
+        return jsonify({"message":"User not found!"}), 404
+    
+    data = request.json
+    contact.first_name = data.get("fistName", contact.first_name)
+    contact.last_name = data.get("lastName", contact.last_name)
+    contact.email = data.get("fistName", contact.email)
+
+    db.session.commit()
+
+    return jsonify("message":"User Updated!"), 200
+
 
 if __name__ == "__main__":
     with app.app_context():
