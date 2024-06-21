@@ -24,6 +24,7 @@ def create_contact():
         )
 
     new_contact = Contact(first_name=first_name, last_name=last_name, email=email)
+
     try:
         db.session.add(new_contact)
         db.session.commit()
@@ -46,8 +47,19 @@ def update_contact(user_id):
 
     db.session.commit()
 
-    return jsonify("message":"User Updated!"), 200
+    return jsonify({"message":"User Updated!"}),200
 
+# Decorator for Delete
+app.route("/delete_contact/<int:user_id>", methods=["DELETE"])
+def delete_contact():
+    contact = Contact.query.get(user_id)
+    if not contact:
+        return jsonify({"message":"User not found!"}), 404
+    
+    db.session.delete(contact)
+    db.session.commit()
+
+    return jsonify({"message":"User Deleted!"}), 200
 
 if __name__ == "__main__":
     with app.app_context():
