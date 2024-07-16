@@ -11,6 +11,7 @@
   width: 80%;
  }
 
+ /* ----- Contact List ----- */
  #contact-list{
   display: flex;
   flex-direction: column;
@@ -24,13 +25,12 @@
   color: #181818;
   font-size: 35px;
   font-family: roboto, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
  #contact-list table{
   text-align: center;
   width: 80%;
-  border: #181818 solid 2px;
  }
 
 #contact-list table thead th{
@@ -39,7 +39,7 @@
   font-family: Roboto, sans-serif;
   font-weight: 400;
   padding: 1rem 0;
-  border: 2px solid #181818;
+  border: 1px solid #181818;
 }
 
 #contact-list table tbody td{
@@ -79,16 +79,21 @@
   background-color: rgb(152, 225, 43);
 }
 
+
+/* ----- Contact Create Form ----- */
  #add-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: #181811;
+  width: 100%;
  }
 
-
- #create-new-contact {
+/* Button Create*/
+#create-new-contact {
+  position: relative;
+  left: 27rem;
   cursor: pointer;
   border: none;
   overflow: hidden;
@@ -97,4 +102,75 @@
   font-weight: 400;
   font-size: 18;
   font-family: Roboto, sans-serif;
+  background-color: greenyellow;
 }
+
+#create-new-contact:hover {
+  background-color: rgb(152, 225, 43);
+}
+
+/* Add Button*/
+#add-form button{
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: 5px 10px;
+  color: #181818;
+  font-weight: 400;
+  font-size: 18;
+  font-family: Roboto, sans-serif;
+  background-color: greenyellow;
+  width:30%;
+}
+
+#add-form button:hover {
+  background-color: rgb(152, 225, 43);
+}
+
+#add-form div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: auto;
+}
+
+#add-form  #add-form-div input{
+  margin: 0.5rem 1rem;
+}
+
+/* Modal Style*/
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0,0, 0.4);
+  font-weight: 300;
+  font-size: 18;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: auto;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+

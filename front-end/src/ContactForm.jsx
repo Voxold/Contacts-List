@@ -34,16 +34,15 @@ const ContactForm = ({ existingContact = {}, updateCallback }) => {
 
     return (
         <form onSubmit={onSubmit} id="add-form">
-            <div>
+            <div id="add-form-div">
                 <label htmlFor="firstName">First Name:</label>
                 <input
                     type="text"
                     id="firstName"
                     value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                />
+                    onChange={(e) => setFirstName(e.target.value)}/>
             </div>
-            <div>
+            <div id="add-form-div">
                 <label htmlFor="lastName">Last Name:</label>
                 <input
                     type="text"
@@ -52,7 +51,7 @@ const ContactForm = ({ existingContact = {}, updateCallback }) => {
                     onChange={(e) => setLastName(e.target.value)}
                 />
             </div>
-            <div>
+            <div id="add-form-div">
                 <label htmlFor="email">Email:</label>
                 <input
                     type="text"
