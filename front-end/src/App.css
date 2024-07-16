@@ -90,7 +90,7 @@
   width: 100%;
  }
 
-/* Button Create*/
+/* Create Button */
 #create-new-contact {
   position: relative;
   left: 27rem;
@@ -171,6 +171,3 @@
   font-weight: bold;
   cursor: pointer;
 }
-
-
-
