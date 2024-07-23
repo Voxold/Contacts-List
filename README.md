@@ -1,9 +1,9 @@
 ## Full-Stack Contacts List application
 
 Setup & Installation:
-    install npm : pip3 install npm
-    install flask : pip3 install Flask
-    install SQLalchemy : pip3 install Flask-SQLalchemy
+    - install npm : pip3 install npm
+    - install flask : pip3 install Flask
+    - install SQLalchemy : pip3 install Flask-SQLalchemy
 
 Building The Back-end :
 building API
